@@ -2,8 +2,8 @@
 pipeline{
 
 	 environment {
-    	registry = "tongzahub/eks-jenkins-demo"
-    	registryCredential = 'docker-user-pass'
+    	registry = "rattanachart9197/demo-cicd"
+    	registryCredential = 'Ra_0927560836'
     	dockerImage = ''
 		region = "ap-southeast-1"
 		clusterName  = "arthit-devops-labs"
@@ -51,7 +51,7 @@ pipeline{
 			// 	]]) {
    			// 		 // AWS Code
 			// 	}
-			  withAWS(credentials: 'eks-credentials', region: 'ap-southeast-1') {
+			  withAWS(credentials: 'aws-rattanachart', region: 'ap-southeast-1') {
 
 
 				  sh "aws iam list-account-aliases"
