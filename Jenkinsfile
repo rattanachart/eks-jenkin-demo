@@ -2,7 +2,7 @@
 pipeline{
 
 	 environment {
-    	registry = "dockerhub-rattanachart"
+    	registry = "rattanachart9197/demo-cicd"
     	registryCredential = 'dockerhub-rattanachart'
     	dockerImage = ''
 		region = "ap-southeast-1"
