@@ -6,7 +6,7 @@ pipeline{
     	registryCredential = 'Ra_0927560836'
     	dockerImage = ''
 		region = "ap-southeast-1"
-		clusterName  = "arthit-devops-labs"
+		clusterName  = "rattanachart-labs"
   	}
 
 	agent any
