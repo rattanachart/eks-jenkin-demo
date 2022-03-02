@@ -40,7 +40,7 @@ pipeline{
      	 	}
    		}
 
-		stage('aws creadentials'){
+		stage('Deploy'){
 			  steps {
 			  
 			//   withCredentials([[
@@ -61,23 +61,23 @@ pipeline{
 
 				  sh 'kubectl get pods'
 				   sh 'kubectl get nodes'
-				  
+				  sh 'kubectl apply -f deploy.yaml'
 			  }
 
 			  }
 
 		}
 
-        stage('eks deploy') {
+        // stage('eks deploy') {
 
-			steps {
-				sh 'echo Hello World'
-				sh 'kubectl get pods'
-                // sh "sed -i 's/hellonodejs:latest/hellonodejs:eks/g' deploy.yaml"
-                // sh 'kubectl apply -f deploy.yaml'
-                // sh 'kubectl rollout restart deployment hello-world-nodejs'
-			}
-		}
+		// 	steps {
+		// 		sh 'echo Hello World'
+		// 		sh 'kubectl get pods'
+        //         sh "sed -i 's/hellonodejs:latest/hellonodejs:eks/g' deploy.yaml"
+        //         sh 'kubectl apply -f deploy.yaml'
+        //         sh 'kubectl rollout restart deployment hello-world-nodejs'
+		// 	}
+		// }
 	}
 
 
